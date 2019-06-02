@@ -62,7 +62,9 @@ body {
     width: 100%;
     background-color: rgb(114, 204, 211);
 }
-
+.img{
+    width: 100%;
+}
 .main {
     float: left;
     height: 500px;
