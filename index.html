@@ -9,11 +9,11 @@
 </head>
 <body>
     <header class="header">
-        <img src="images/title.jpg" alt="" class="header__title">
+        <img src="images/title.jpg" alt="Header image" class="header__title">
     </header>
     <div class="bg">
-        <div class="button"><a href="#" onclick="toggle_visibility('nav');"><img src="images/button.png" class="button__link"></a></div>
-        <nav class="nav">
+        <div class="button" id="button--id"><a href="#" onclick="toggleVisibility('nav--id');"><img src="images/button.png" class="button__link"></a></div>
+        <nav class="nav" id="nav--id">
             <ul class="nav__list">
                 <li class="list__item"><a href="https://www.dndbeyond.com/monsters" target="_blank" class="item__text">Monsters</a></li>
                 <li class="list__item"><a href="https://www.dndbeyond.com/spells" target="_blank" class="item__text">Spells</a></li>
@@ -39,15 +39,7 @@
 
     </footer>
     
-</body>
 <!--Button Functionality // Javascript-->
-<script type="text/javascript">
-    function toggle_visibility(e) {
-        var e = document.getElementsByClassName(e);
-        if(e[0].style.display == 'block')
-            e[0].style.display = 'none';
-        else
-            e[0].style.display = 'block';
-    }
-</script>
+<script src="js/script.js" type="application/javascript"></script>
+</body>
 </html>
