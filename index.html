@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Taller de WEB brach </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-       <header class="header">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dicta vitae reiciendis dolor repudiandae corrupti.</p>
-       </header>
-       <main class="main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Dungeon Master's Digest</title>
+</head>
+<body>
+    <header class="header">
+        <img src="images/title.jpg" alt="" class="header__title">
+    </header>
+    <div class="bg">
+        <div class="button"><a href="#" onclick="toggle_visibility('nav');"><img src="images/button.png" class="button__link"></a></div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="list__item"><a href="https://www.dndbeyond.com/monsters" target="_blank" class="item__text">Monsters</a></li>
+                <li class="list__item"><a href="https://www.dndbeyond.com/spells" target="_blank" class="item__text">Spells</a></li>
+                <li class="list__item"><a href="https://www.dndbeyond.com/feats" target="_blank" class="item__text">Feats</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <div class="div div--small">
 
-            <div class="container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dicta vitae reiciendis dolor repudiandae corrupti.</p>
             </div>
-            <img src="img\logo.png" alt="Logo La Bestia" class="img">
+            <div class="div div--middle">
+
+            </div>
+            <div class="div div--small">
+
+            </div>
+            <div class="div div--bottom">
+
+            </div>
         </main>
-       <aside class="aside">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dicta vitae reiciendis dolor repudiandae corrupti.</p>
-       </aside>
-       <footer class="footer">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dicta vitae reiciendis dolor repudiandae corrupti.</p>
-       </footer>
-    </body>
+    </div>
+    <footer class="footer">
+
+    </footer>
+    
+</body>
+<!--Button Functionality // Javascript-->
+<script type="text/javascript">
+    function toggle_visibility(e) {
+        var e = document.getElementsByClassName(e);
+        if(e[0].style.display == 'block')
+            e[0].style.display = 'none';
+        else
+            e[0].style.display = 'block';
+    }
+</script>
 </html>
