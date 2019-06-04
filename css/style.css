@@ -189,6 +189,14 @@ body{
     width: 100%;
     background-color: #000000;
 }
+.footer__img{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    max-height: 70%;
+    min-height: 25px;
+    min-width: 50px;
+}
 
 /*
     MEDIA QUERY/RESPONSIVE OPTIONS
