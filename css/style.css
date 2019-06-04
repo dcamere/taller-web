@@ -148,6 +148,9 @@ body{
     margin-left: 50%;
     transform: translateX(-50%);
 }
+.img--bottom{
+    min-height: 100%;
+}
 .text{
     box-sizing: border-box;
     display: inline-block;
