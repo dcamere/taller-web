@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1> Adventurer Registration </h1>
+        <h2> Fill in your information for applying to our services. </h2>
+            
+        <form action="" class="form">
+            <label for="nombre">Name: </label>
+            <input type="text" placeholder="Daenarys Targaryen" id="nombre" value="" required/>
+
+            <label for="raza">Race: </label>
+            <input type="text" placeholder="Dragonkin" id="edad" value="" required/>
+        
+            <label for="edad">Age</label>
+            <input type="number" placeholder="245" id="edad" value="" />
+        
+            <label for="edad">E-mail</label>
+            <input type="email" placeholder="KhalessiMotherOfDragonsBreakerOfChainsEtal@7kingdoms.westeros" id="email" value="" required/>
+        
+            <label for="fechaInicio">Date of Aplication</label>
+            <input type="date" placeholder="fecha" id="fechaInicial"/>
+
+            <label for="fechaFinal">Date of Quest To Schedule</label>
+            <input type="date" placeholder="fecha" id="fechaQuest"/>
+
+
+            <div class="radio-group">
+                    <h2> Choose your Gender: </h2>
+                    <h2> !Important Note: by defaulting de Non Binary state we ARE NOT assuming your gender </h2>
+                <label for="m">
+                    <input type="radio" id="m" value="masculino" name="sexo">
+                    Male
+                </label>
+
+                <label for="f">
+                    <input type="radio" id="f" value="femenino" name="sexo" >
+                    Female
+                </label>
+
+                <label for="nb">
+                        <input type="radio" id="nb" value="nonBinary" name="sexo" checked>
+                        Non Binary
+                    </label>
+            </div>
+            
+            <div class="checkbox-group">
+                <h2> Tools Experience: </h2>
+                <label for="opt1">
+                    <input type="checkbox" value="opcion1" name="opciones" id="Toolopt1"  />
+                    Woodcutting Axes
+                </label>
+                <label for="opt2">
+                    <input type="checkbox" value="opcion2" name="opciones" id="Toolopt2"  />
+                    Heavy Metal Mining Picks
+                </label>
+                <label for="opt3">
+                    <input type="checkbox" value="opcion3" name="opciones" id="Toolopt3"  />
+                    Sharp Crop Hoes
+                </label>
+                <label for="opt4">
+                    <input type="checkbox" value="opcion4" name="opciones" id="Toolopt4"  />
+                    Blacksmith Hammers
+                </label>
+                <label for="opt5">
+                    <input type="checkbox" value="opcion5" name="opciones" id="Toolopt5"  />
+                    Cooking Knives
+                </label>    
+            </div>  
+
+            <div class="checkbox-group2">
+                    <h2> Weapons Experience: </h2>
+                    <label for="opt1">
+                        <input type="checkbox" value="opcion1" name="WeaponOpciones" id="WeapOpts1"  />
+                        Swords, Maces & Axes
+                    </label>
+                    <label for="opt2">
+                        <input type="checkbox" value="opcion2" name="WeaponOpciones" id="WeapOpts2"  />
+                        Bows, Slings & Crossbows
+                    </label>
+                    <label for="opt3">
+                        <input type="checkbox" value="opcion3" name="WeaponOpciones" id="WeapOpts3"  />
+                        Heavy Siege Machinery
+                    </label>
+                    <label for="opt4">
+                        <input type="checkbox" value="opcion4" name="WeaponOpciones" id="WeapOpts4"  />
+                        Faith Powers
+                    </label>
+                    <label for="opt5">
+                        <input type="checkbox" value="opcion5" name="WeaponOpciones" id="WeapOpts5"  />
+                        Chemistry, Alchemy & Black Arts
+                    </label>    
+                </div>
+
+                <div> 
+                        <h2> Choose your approximate Income </h2>
+
+                        <select name="opcioness1" id="opcioness1">
+                
+                                <option value="1">Education</option>
+                                <option value="2">Laws</option>
+                                <option value="3" selected>Technology Industry</option>
+                                <option value="4">Clerical Foundation</option>
+                                <option value="5">Congressman Assesor</option>
+                        </select>
+
+                </div>
+
+           
+                <div> 
+                    <h2>Make a drawing of yourself using ASCII characters:</h2>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="╭∩╮(Ο_Ο)╭∩╮"></textarea>
+
+                </div>
+           
+        
+            <input type="submit" value="Ready?"/>
+            <button type="submit" value="Listo">Send Application to our councel</button>
+        </form>
+        
+        <form action="" class="form2">
+            <input type="text">
+        </form>
+    </body>
+</html>

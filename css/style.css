@@ -50,21 +50,23 @@ table {
 	border-spacing: 0;
 }
 
-body {
-    background-color: black;
-}
+/*
+        INDEX ELEMENTS
+*/
 
 .header {
     height: 100px;
     width: 100%;
-    background-color: green;
+    background-color: rgb(114, 204, 211);
 }
-
+.img{
+    width: 100%;
+}
 .main {
     float: left;
     height: 500px;
-    width: 33%;
-    background-color: purple;
+    width: 65%;
+    background-color: rgb(121, 121, 121);
     position: relative;
     padding: 0 10%;
 }
@@ -73,14 +75,68 @@ body {
     float: right;
     height: 500px;
     width: 30%;
-    background-color: blue;
+    background-color: rgb(255, 164, 184);
 }
 
 .footer {
     clear: both;
     height: 100px;
     width: 100%;
-    background-color: brown; 
+    background-color: rgb(33, 65, 124); 
+}
+
+.form {
+    padding: 20px;
+    border: 1px  black;
+    border-radius: 4px;
+    width: 50%;
+}
+
+body .form input {
+    background-color: rgb(2, 39, 2);
+}
+
+body .form2 input{
+    background-color: red;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"] {
+    width: 100%;  
+    height: 40px;
+    border: 1px black solid;
+    opacity: 0.5;
+    padding: 5px;
+    margin-bottom: 12px;
+    background-color: yellow;
+}
+
+.radio-group,
+.checkbox-group {
+    margin-bottom: 16px;
+}
+
+select {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    background-color: red;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    background-color: blue;
+}
+
+form {
+    margin-bottom: 50px;
 }
 
 /*
@@ -102,4 +158,13 @@ body {
         display: block;
         width: 100%;
     }
+}
+
+
+.separador::before {
+    content: "";
+    display: block;
+    background-color: blue;
+    height: 2px;
+    margin-bottom: 25px;
 }
