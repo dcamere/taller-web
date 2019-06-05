@@ -84,12 +84,16 @@ table {
     width: 100%;
     background-color: rgb(33, 65, 124); 
 }
-
 .form {
     padding: 20px;
-    border: 1px red solid;
+    border: 1px gray solid;
+    background-color: lightgray;
     border-radius: 4px;
-    width: 50%;
+    width: 100%;
+}
+
+.wrap {
+    padding: 32px 32px 0;
 }
 
 body .form input {
