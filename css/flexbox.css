@@ -1,0 +1,35 @@
+.container {
+    padding: 32px;
+}
+
+.flex-parent {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.card {
+    width: 20%;
+    height: auto;
+    border: 1px black solid;
+    text-align: center;
+}
+
+.card__top__title {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 6px 0 16px;
+}
+
+.card__top__text {
+    margin-bottom: 16px;
+}
+
+.card__bottom__link {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.card__top__img {
+    width: 100%;
+}
