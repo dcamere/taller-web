@@ -7,15 +7,19 @@
     width: 100%;
     background-color: rgb(114, 204, 211);
 }
+
 .img{
-    width: 100%;
+    /*  Se le dió 100% de ancho a la imagen para que sea responsive (que tenga siempre el ancho máximo de su padre) */
+    /* PD: consideren que si solo le ponen el ancho, el alto se va a redimensionar proporcionalmente de manera automática */
+    width: 100%; 
 }
+
 .main {
-    float: left;
+    float: left; /* Flotante a la izquierda */
     height: 500px;
     width: 65%;
     background-color: rgb(121, 121, 121);
-    position: relative;
+    position: relative; /* Posición relativa: cualquier hijo de este elemento que tenga posición absoluta, se ordenará respecto a éste elemento */
     padding: 0 10%;
 }
 
@@ -27,20 +31,23 @@
 }
 
 .footer {
-    clear: both;
+    clear: both; /* Esta propiedad permite que limpie los flotantes anteriores para que vaya después de ellos */
     height: 100px;
     width: 100%;
     background-color: rgb(33, 65, 124); 
 }
+
+/* Estilos de formulario */
 .form {
     padding: 20px;
-    border: 1px gray solid;
+    border: 1px gray solid; /* Borde de 1px de grosor, color gris y de línea solida(sin interrupciones) */
     background-color: lightgray;
-    border-radius: 4px;
+    border-radius: 4px; /* Le redondea el borde que se puso arriba por 4px de redonedado */
     width: 100%;
 }
 
 .wrap {
+    /* Este css es solo un pequeño wrap (un encerrador o contenedor) de toda la página para darle márgenes a los lados y arriba */
     padding: 32px 32px 0;
 }
 
@@ -52,6 +59,7 @@ body .form2 input{
     background-color: green;
 }
 
+/* Se buscan los elementos que tengan ciertos atributos específicos (en este caso, los input que tengan type="x" */
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -59,12 +67,13 @@ input[type="email"] {
     width: 100%;  
     height: 40px;
     border: 1px black solid;
-    opacity: 0.5;
+    opacity: 0.5; /* La opacidad del elemento lo vuelve más transparente o más sólido (1 siendo sólido y 0 siendo transparente) */
     padding: 5px;
     margin-bottom: 12px;
     background-color: yellow;
 }
 
+/* Recuerden que separados por comas, se puede poner los mismos estilos a distintas clases */
 .radio-group,
 .checkbox-group {
     margin-bottom: 16px;
@@ -76,13 +85,13 @@ select {
 }
 
 textarea {
-    resize: none;
+    resize: none; /* Esto le quita la opción de redimensionar el textarea */
     width: 100%;
     background-color: red;
 }
 
 textarea {
-    resize: none;
+    resize: none; /* Esto le quita la opción de redimensionar el textarea */
     width: 100%;
     background-color: blue;
 }
@@ -97,7 +106,7 @@ form {
 @media only screen and (max-width: 767px) {
     .header {
         position: fixed;
-        z-index:  1;
+        z-index:  1; /* índice z, que viene a ser en que nivel de capa (una encima de la otra) se encuentra el elemento */
     }
     
     .main {
@@ -113,6 +122,9 @@ form {
 }
 
 
+
+/* Así se crea un pseudoelemento, recordemos que son como divs creados a través de CSS pero que no los leen los robots, son como "fantasmas" */
+/* PD: Recordemos también que un input no puede tener pseudoelementos */
 .separador::before {
     content: "";
     display: block;
