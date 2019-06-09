@@ -1,0 +1,39 @@
+.container {
+    padding: 32px;
+}
+
+.parent {
+    font-size: 0;
+}
+
+.card {
+    display: inline-block;
+    margin-right: 3%;
+    width: 30%;
+    height: auto;
+    border: 1px black solid;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card__top__title {
+    font-size: 26px;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 6px 0 16px;
+}
+
+.card__top__text {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.card__bottom__link {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.card__top__img {
+    width: 100%;
+}
