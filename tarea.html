@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/tarea.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <form class="form" action="">
+                <h2 class="main-title">Feedback Form</h2>
+                <p class="main-text separator">We would love to hear your thoughts, concerns or problems with anything so we can improve!</p>
+                <div class="form__row">
+                    <h3 class="form__title form__title--required">Feedback type</h4> 
+                    <label for="comments">
+                        <input class="input__radio" type="radio" name="feedbacktype" id="comments">
+                        Comments
+                    </label>
+                    <label for="bugreports">
+                        <input class="input__radio" type="radio" name="feedbacktype" id="bugreports">
+                        Bug Reports
+                    </label>
+                    <label for="Questions">
+                        <input class="input__radio" type="radio" name="feedbacktype" id="questions">
+                        Questions
+                    </label>
+                </div>
+                
+                <div class="form__row">
+                    <h3 class="form__title form__title--required">Describe Feedback</h3>
+                    <textarea class="form__description" name="description" id="description" cols="30" rows="6"></textarea>
+                </div>
+                
+                <div class="form__row">
+                    <h3 class="form__title form__title--required">Name</h3>
+                    <div class="form__column">
+                        <input type="text" class="form__firstname" id="firstname">
+                        <label class="form__inputlabel" for="firstname">First Name</label>
+                    </div>
+                    <div class="form__column">
+                        <input type="text" class="form__lastname" id="lastname">
+                        <label class="form__inputlabel" for="lastname">Last Name</label>
+                    </div>
+                </div>
+               
+                <div class="form__row">
+                    <h3 class="form__title form__title--required">E-mail</h3>
+                    <input type="email" class="form__email" placeholder="ex: myname@example.com">
+                </div>
+               
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </div>
+    </body>
+</html>

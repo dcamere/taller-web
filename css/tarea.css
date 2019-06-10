@@ -1,0 +1,85 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form .form__title {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form .form__title.form__title--required::after {
+    content: '*';
+    color: red;
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.form label {
+    margin-right: 50px;
+    font-size: 18px;
+}
+
+.form .form__row {
+    margin-bottom: 32px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.form .form__column {
+    display: inline-block;
+}
+
+.form .form__column input {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form .form__firstname {
+    width: 95%;
+}
+
+.form .form__lastname {
+    width: 100%;
+}
+
+.form .form__column label {
+    display: inline-block;
+    color: gray;
+    font-size: 16px;
+    margin-bottom: 16px;
+    margin-right: 0;
+}
+
+textarea {
+    width: 65%;
+    resize: none;
+}
+
+.form__email {
+    width: 65%;
+}
+
+.separator::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: lightgray;
+    display: block;
+    margin: 26px 0;
+}
