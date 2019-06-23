@@ -10,13 +10,15 @@ $black: hsl(0, 0%, 4%);
 $white: hsl(0, 0%, 100%);
 $light: hsl(0, 0%, 96%);
 $dark: hsl(0, 0%, 21%);
-
+$color: rgb(132, 206, 117);
 $primary: $turquoise;
 $link: $blue;
 $info: $cyan;
 $success: $green;
 $warning: $yellow;
 $danger: $red;
+
+$themedark: false;
 
 $colorList: (black: $black, white: $white, light: $light, dark: $dark, primary: $primary, link: $link, info: $info, success: $success, warning: $warning, danger: $danger);
 
