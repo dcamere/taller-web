@@ -1,4 +1,7 @@
+.idea
 node_modules
-dist/
-.tmp
-app.yaml
+.sass-cache
+*.thumb
+npm-debug.log
+public/
+yarn.lock

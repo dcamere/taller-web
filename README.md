@@ -1,77 +1,84 @@
-# [![Web Starter Kit](https://cloud.githubusercontent.com/assets/110953/11445049/f05512ba-9520-11e5-8fdb-8c8eb5f690d0.jpg)](https://github.com/google/web-starter-kit/releases/latest)
+## Gulp / Pug / Sass Starter template.
 
-## Overview
+### Note / Примечание
 
-[Web Starter Kit](https://developers.google.com/web/tools/starter-kit/) is an opinionated boilerplate for web development. Tools for building a great experience across many devices and [performance oriented](#web-performance). Helping you to stay productive following the best practices outlined in Google's [Web Fundamentals](https://developers.google.com/web/fundamentals/). A solid starting point for both professionals and newcomers to the industry.
+This readme file will be written in 2 languages (English, Russian).
 
-### Features
+Содержание будет написано на 2-х языках (Английский, Русский).
 
-| Feature                                | Summary                                                                                                                                                                                                                                                     |
-|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Responsive boilerplate | A responsive boilerplate optimized for the multi-screen web. Powered by [Material Design Lite](http://getmdl.io).  You're free to use either this or a completely clean-slate  via [basic.html](https://github.com/google/web-starter-kit/blob/master/app/basic.html).                          |
-| Sass support                           | Compile [Sass](http://sass-lang.com/) into CSS with ease, bringing support for variables, mixins and more. (Run `gulp serve` or `gulp` for production)                                                                                                      |
-| Performance optimization               | Minify and concatenate JavaScript, CSS, HTML and images to help keep your pages lean. (Run `gulp` to create an optimised version of your project to `/dist`)                                                                                                |
-| Code Linting               | JavaScript code linting is done using [ESLint](http://eslint.org) - a pluggable linter tool for identifying and reporting on patterns in JavaScript. Web Starter Kit uses ESLint with [eslint-config-google](https://github.com/google/eslint-config-google), which tries to follow the Google JavaScript style guide.                                                                                                |
-| ES2015 via Babel 6.0                   | Optional ES2015 support using [Babel](https://babeljs.io/). To enable ES2015 support remove the line `"only": "gulpfile.babel.js",` in the [.babelrc](.babelrc) file. ES2015 source code will be automatically transpiled to ES5 for wide browser support.  |
-| Built-in HTTP Server                   | A built-in server for previewing your site locally while you develop and iterate                                                                                                                                                                            |
-| Live Browser Reloading                 | Reload the browser in real-time anytime an edit is made without the need for an extension. (Run `gulp serve` and edit your files)                                                                                                                           |
-| Cross-device Synchronization           | Synchronize clicks, scrolls, forms and live-reload across multiple devices as you edit your project. Powered by [BrowserSync](http://browsersync.io). (Run `gulp serve` and open up the IP provided on other devices on your network)                       |
-| Offline support                     | Thanks to our baked in [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) [pre-caching](https://github.com/google/web-starter-kit/blob/master/gulpfile.babel.js#L226), sites deploying `dist` to a HTTPS domain will enjoy offline support. This is made possible by [sw-precache](https://github.com/GoogleChrome/sw-precache/).                                                                                                                                              |
-| PageSpeed Insights                     | Web performance metrics showing how well your site performs on mobile and desktop (Run `gulp pagespeed`)                                                                                                                                                    |
+### Description / Описание
 
-## Quickstart
+Simple project to fast-start web-development with Gulp, Pug and Sass.
 
-[Download](https://github.com/google/web-starter-kit/releases/latest) the kit or clone this repository and build on what is included in the `app` directory.
+Простой проект для быстрой разработки сайтов с использованием Gulp, Pug и Sass.
 
-There are two HTML starting points, from which you can choose:
+### What`s inside / Что включено
 
-- `index.html` - the default starting point, containing Material Design layout.
-- `basic.html` - no layout, but still includes our minimal mobile best-practices
+This project uses:
 
-Be sure to look over the [installation docs](docs/install.md) to verify your environment is prepared to run WSK.
-Once you have verified that your system can run WSK, check out the [commands](docs/commands.md) available to get started.
+1. [autoprefixer](https://github.com/postcss/autoprefixer) and [gulp-postcss](https://github.com/postcss/gulp-postcss) to add vendor prefixes.
+2. [browser-sync](https://github.com/browsersync/browser-sync) to launch a local server.
+3. [gulp-changed](https://github.com/sindresorhus/gulp-changed#readme) to detect whether files in the stream changed.
+4. [gulp-concat](https://github.com/gulp-community/gulp-concat) to concat javascript files.
+5. [gulp-data](https://github.com/colynb/gulp-data) to pass data to .pug files.
+6. [del](https://github.com/sindresorhus/del) to clean public folder.
+7. [gulp]() **Note** - version 3.9.0. If you updated to gulp 4+ then gulpfile.js won`t work.
+8. [gulp-if](https://github.com/robrich/gulp-if) to make conditional tasks.
+9. [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin) to optimize images.
+10. [gulp-plumber](https://github.com/floatdrop/gulp-plumber) to prevent pipe breaking.
+11. [gulp-pug](https://github.com/jamen/gulp-pug) to compile pug files.
+12. [run-sequence](https://github.com/OverZealous/run-sequence) to run a sequence of gulp tasks.
+13. [gulp-sass](https://github.com/dlmanning/gulp-sass) to compile sass files.
+14. [gulp-sourcemaps](https://github.com/gulp-sourcemaps/gulp-sourcemaps) to write source maps.
+15. [gulp-uglify](https://github.com/terinjokes/gulp-uglify/) to minify JavaScript.
+16. [gulp-babel](https://github.com/babel/gulp-babel) it`s obvious
 
-## Web Performance
+В проекте используются:
 
-Web Starter Kit strives to give you a high performance starting point out of the box. Our median Web Page Test [scores](http://www.webpagetest.org/result/151201_VW_XYC/) for the default template have a [Speed Index](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index) of ~1100 (1000 is ideal) and a repeat-visit Speed Index of ~550 thanks to Service Worker precaching.
+1. [autoprefixer](https://github.com/postcss/autoprefixer) и [gulp-postcss](https://github.com/postcss/gulp-postcss) для добавления вендорных префиксов.
+2. [browser-sync](https://github.com/browsersync/browser-sync) для запуска локального сервера.
+3. [gulp-changed](https://github.com/sindresorhus/gulp-changed#readme) чтобы отслеживать изменения файлов.
+4. [gulp-concat](https://github.com/gulp-community/gulp-concat) для конкатенации скриптов.
+5. [gulp-data](https://github.com/colynb/gulp-data) для передачи данных в .pug файлы.
+6. [del](https://github.com/sindresorhus/del) для очистки директории public.
+7. [gulp]() **Примечание** - версия 3.9.0. Если Вы обновите gulp до версии 4+, то проект не будет работать.
+8. [gulp-if](https://github.com/robrich/gulp-if) для работы с "условными" задачами.
+9. [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin) для оптимизации изображений.
+10. [gulp-plumber](https://github.com/floatdrop/gulp-plumber) для предотвращения так называемых "pipe breaking".
+11. [gulp-pug](https://github.com/jamen/gulp-pug) для компиляции .pug файлов.
+12. [run-sequence](https://github.com/OverZealous/run-sequence) для запуска задач gulp в определенной последовательности.
+13. [gulp-sass](https://github.com/dlmanning/gulp-sass) для компиляции .sass файлов.
+14. [gulp-sourcemaps](https://github.com/gulp-sourcemaps/gulp-sourcemaps) для создания "карт".
+15. [gulp-uglify](https://github.com/terinjokes/gulp-uglify/) для минификации скриптов.
+16. [gulp-babel](https://github.com/babel/gulp-babel) предназначение очевидно
 
-## Browser Support
+### Usage
+- Execute `npm install` or `yarn` from base directory to install all dependencies.
+- Execute `gulp` or `yarn start` or `npm start` to start development server.
+- Execute `gulp build` or `yarn run build` or `npm run build` to build project files.
 
-At present, we officially aim to support the last two versions of the following browsers:
+### Использование
+- Выполните комманду `npm install` или `yarn` из базовой директории проекта для установки всех необходимых зависимостей.
+- выполните комманду `gulp` или `yarn start` или `npm start` для запуска сервера.
+- выполните комманду `gulp build` or `yarn run build` or `npm run build` для создания готового проекта.
 
-* Chrome
-* Edge
-* Firefox
-* Safari
-* Opera
-* Internet Explorer 9+
 
-This is not to say that Web Starter Kit cannot be used in browsers older than those reflected, but merely that our focus will be on ensuring our layouts work great in the above.
+### Addons / Дополнения
 
-## Troubleshooting
+By default this project includes:
 
-If you find yourself running into issues during installation or running the tools, please check our [Troubleshooting](https://github.com/google/web-starter-kit/wiki/Troubleshooting) guide and then open an [issue](https://github.com/google/web-starter-kit/issues). We would be happy to discuss how they can be solved.
+- Jquery 3.1.0
+- GSAP
+- Bootstrap 4 Grid (**Note:** Only grid. You ask why? Because as developer I hate css frameworks with the whole bunch of useless styles and scripts.)
+- color variables
 
-## A Boilerplate-only Option
+If you don`t need something - just delete it.
 
-If you would prefer not to use any of our tooling, delete the following files from the project: `package.json`, `gulpfile.babel.js` and `.travis.yml`. You can now safely use the boilerplate with an alternative build-system or no build-system at all if you choose.
+В данный проект по умолчанию включены:
 
-## Docs and Recipes
+- Jquery 3.1.0
+- GSAP
+- Bootstrap 4 Grid (**Примечание:** Только сетка. Почему? Я, как разработчик, не люблю css фреймворки с кучей ненужных стилей и скриптов.)
+- цветовые переменные
 
-* [File Appendix](https://github.com/google/web-starter-kit/blob/master/docs/file-appendix.md) - What do the different files here do?
-* [Using Material Design Lite's Sass](https://github.com/google/web-starter-kit/blob/master/docs/mdl-sass.md) - how to get MDL's Sass working with WSK
-* [Deployment guides](https://github.com/google/web-starter-kit/blob/master/docs/deploy.md) - available for Firebase, Google App Engine and other services.
-* [Gulp recipes](https://github.com/gulpjs/gulp/tree/master/docs/recipes) - the official Gulp recipes directory includes a comprehensive list of guides for different workflows you can add to your project.
-
-## Inspiration
-
-Web Starter Kit is inspired by [Mobile HTML5 Boilerplate](https://html5boilerplate.com/mobile/) and Yeoman's [generator-gulp-webapp](https://github.com/yeoman/generator-webapp), having taken input from contributors to both projects during development. Our [FAQs](https://github.com/google/web-starter-kit/wiki/FAQ) attempt to answer commonly asked questions about the project.
-
-## Contributing
-
-Contributions, questions and comments are all welcome and encouraged. For code contributions to Web Starter Kit, please see our [Contribution guide](CONTRIBUTING.md) before submitting a pull request. [Website](https://developers.google.com/web/tools/starter-kit/) related issues should be filed on the [Web Fundamentals](https://github.com/google/WebFundamentals/issues/new) issue tracker.
-
-## License
-
-Apache 2.0  
-Copyright 2015 Google Inc
+Если что-то из данного списка Вам не требуется - можете смело удалять.
