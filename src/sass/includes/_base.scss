@@ -34,3 +34,27 @@ html, body {
 *:before {
   box-sizing: border-box;
 }
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+      @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1025px) {
+      @content;
+  }
+}
+
+@function width-column($columns, $total) {
+  @return (100% / $total) * $columns;
+}
+
+@mixin clearfix {
+  &::after {
+      content: '';
+      display: table;
+      clear: both;
+  }
+}
