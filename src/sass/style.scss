@@ -2,28 +2,67 @@
 @import "includes/variables";
 
 .wrap {
-  padding: 0 32px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 width-column(1, 26);
+  @include tablet {
+    padding: 0 width-column(1, 31);
+  }
 }
 
 .home {
+  height: 100vh;
+
+  /*@if $theme == 'dark' {
+    background-color: black;
+  }
+
+  @if $theme == 'green' {
+    background-color: green;
+  } */
+
   .flex-parent {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
+  /*@for $i from 1 through 3 {
+    .card-#{$i} {
+      width: 100% / $i;
+    }
+  }*/
+
   .card {
-    width: 30%;
-    border: 1px black solid;
+    width: 100%;
+    border: 1px gray solid;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 10px width-column(1, 24);
+    margin-bottom: 12px;
+    transition: all 1s;
+    @include tablet {
+      width: width-column(9, 29);
+      margin: 10px width-column(1, 29) 10px 0;
+      padding: 10px;
+    }
 
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border: 1px red solid;
+      background-color: lightgray;
+
+      .card__title {
+        transform: translateX(30%);
+      }
+    }
+      
     &__title {
-      color: gray;
-      font-size: 20px;
+      transition: all 0.5s;
+      @include createFont($bigFont, red, bold, Arial);
 
       &--red {
         color: $red;
@@ -36,7 +75,7 @@
 
     &__text {
       text-align: center;
-      font-weight: bold;
+      @include createFont(16px, gray, normal, Arial);
     }
   }
 }

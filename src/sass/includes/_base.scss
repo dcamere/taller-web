@@ -35,6 +35,13 @@ html, body {
   box-sizing: border-box;
 }
 
+@mixin createFont($fontSize, $color, $fontWeight, $fontFamily) {
+  font-size: $fontSize;
+  color: $color;
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+}
+
 @mixin tablet {
   @media only screen and (min-width: 768px) {
       @content;
