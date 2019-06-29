@@ -1,81 +1,37 @@
 @import "includes/base";
 @import "includes/variables";
 
-.wrap {
-  max-width: 1240px;
+.wrap{
+  max-width: 1024px;
   margin: 0 auto;
-  padding: 0 width-column(1, 26);
-  @include tablet {
-    padding: 0 width-column(1, 31);
-  }
 }
+.flex-parent{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 
-.home {
-  height: 100vh;
+  .card{
+    width: 25%;
+    padding: 15px;
 
-  /*@if $theme == 'dark' {
-    background-color: black;
-  }
+      .image{
 
-  @if $theme == 'green' {
-    background-color: green;
-  } */
-
-  .flex-parent {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  /*@for $i from 1 through 3 {
-    .card-#{$i} {
-      width: 100% / $i;
-    }
-  }*/
-
-  .card {
-    width: 100%;
-    border: 1px gray solid;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 10px width-column(1, 24);
-    margin-bottom: 12px;
-    transition: all 1s;
-    @include tablet {
-      width: width-column(9, 29);
-      margin: 10px width-column(1, 29) 10px 0;
-      padding: 10px;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      border: 1px red solid;
-      background-color: lightgray;
-
-      .card__title {
-        transform: translateX(30%);
       }
-    }
-      
-    &__title {
-      transition: all 0.5s;
-      @include createFont($bigFont, red, bold, Arial);
 
-      &--red {
-        color: $red;
+      .title{
+
       }
-    }
 
-    &__input {
-      width: 100%;
-    }
+      .subTitle{
 
-    &__text {
-      text-align: center;
-      @include createFont(16px, gray, normal, Arial);
-    }
+      }
+
+      .text{
+
+      }
+
+      .button{
+
+      }
   }
 }
