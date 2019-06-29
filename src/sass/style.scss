@@ -3,35 +3,22 @@
 
 .wrap{
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0 width-column(1,26);
 }
 .flex-parent{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 
   .card{
-    width: 25%;
-    padding: 15px;
+    width: width-column(24,24);
+    padding: 0 width-column(0.5, 24);
+    overflow: hidden;
+    border-radius: 5px;
+
 
       .image{
-
-      }
-
-      .title{
-
-      }
-
-      .subTitle{
-
-      }
-
-      .text{
-
-      }
-
-      .button{
-
+        width: 100%;
       }
   }
 }
