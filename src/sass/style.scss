@@ -1,24 +1,51 @@
 @import "includes/base";
 @import "includes/variables";
 
-.wrap{
+.wrap {
   max-width: 1024px;
   margin: 0 width-column(1,26);
 }
-.flex-parent{
+.flex-parent {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 
-  .card{
-    width: width-column(24,24);
-    padding: 0 width-column(0.5, 24);
-    overflow: hidden;
-    border-radius: 5px;
+  .card {
+    width: width-column(10,24);
+    margin: 0 width-column(1,24);
+    perspective: 1000px;
 
-
-      .image{
+      .frame{
         width: 100%;
+        z-index: -9999;
+      }
+
+      .flip {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+
+        &:hover {
+          transform: rotateY(180deg);
+        }
+
+        .image {
+          width: 100%;
+        }
+
+        &__front, &__back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+
+        &__back {
+          transform: rotateY(180deg);
+        }
       }
   }
 }
