@@ -43,3 +43,18 @@ $(document).ready(function () {
 	tl.staggerFromTo($('.row.second div'), .5, {y: 400, autoAlpha: 0}, {y:0, autoAlpha: 1}, 0.3);
 	tl.to(htmlAndBody, .1, {overflowY: "auto"});
 });
+
+$(document).ready(function(){
+	
+	$('.flip').on('click', function(){
+		
+		if ( $(this).hasClass('turn') ) {
+			$(this).removeClass('turn');
+		} else {
+			$('.flip').removeClass('turn');
+			$(this).addClass('turn');
+		}
+		
+	});
+	
+});

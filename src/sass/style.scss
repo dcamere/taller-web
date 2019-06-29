@@ -3,7 +3,7 @@
 
 .wrap {
   max-width: 1024px;
-  margin: 0 width-column(1,26);
+  margin: 20px width-column(1,26);
 }
 .flex-parent {
   width: 100%;
@@ -12,12 +12,21 @@
 
   .card {
     width: width-column(10,24);
-    margin: 0 width-column(1,24);
+    margin: 10% width-column(1,24);
     perspective: 1000px;
+    transition: transform 0.5s ease-out;
 
       .frame{
         width: 100%;
         z-index: -9999;
+      }
+
+      &:first-child {
+        margin: 0 width-column(7,24);
+      }
+
+      &:hover {
+        transform: scale(1.1);
       }
 
       .flip {
@@ -28,9 +37,9 @@
         transition: transform 1s;
         transform-style: preserve-3d;
 
-        &:hover {
+        /*&:hover {
           transform: rotateY(180deg);
-        }
+        }*/
 
         .image {
           width: 100%;
@@ -47,5 +56,9 @@
           transform: rotateY(180deg);
         }
       }
+  }
+
+  .turn {
+    transform: rotateY(180deg);
   }
 }
