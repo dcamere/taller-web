@@ -1,4 +1,6 @@
-/* jQuery anchor link */
+/*import { get } from "https*/
+
+/* jQuery anchor link 
 $(function () {
 	$('a[href^="#"]').on('click', function (event) {
 		var href = $(this).attr('href'),
@@ -9,13 +11,13 @@ $(function () {
 	});
 });
 
-/* Check for device type */
+/* Check for device type 
 var detectDeviceType = function detectDeviceType() {
 	return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
 	);
 };
 
-/* Check if element is visible */
+/* Check if element is visible 
 var elementIsVisibleInViewport = function elementIsVisibleInViewport(el) {
 	var partiallyVisible = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
 	
@@ -34,27 +36,14 @@ var elementIsVisibleInViewport = function elementIsVisibleInViewport(el) {
 
 /* Example of GSAP Timeline lite */
 $(document).ready(function () {
-	var tl = new TimelineLite();
-	var htmlAndBody = $('html, body');
-	tl.to(htmlAndBody, .1, {overflowY: "hidden"});
-	tl.staggerFrom($('.animate'), .7, {y: -200, autoAlpha: 0}, 0.3);
-	tl.staggerFrom($('.including'), .3, {x: -400, autoAlpha: 0});
-	tl.staggerFrom($('.avatar'), 0.6, {scale: 0, autoAlpha: 0,  ease: Sine.easeOut});
-	tl.staggerFromTo($('.row.second div'), .5, {y: 400, autoAlpha: 0}, {y:0, autoAlpha: 1}, 0.3);
-	tl.to(htmlAndBody, .1, {overflowY: "auto"});
-});
-
-$(document).ready(function(){
-	
 	$('.flip').on('click', function(){
-		
-		if ( $(this).hasClass('turn') ) {
-			$(this).removeClass('turn');
+		var flip = $(this)
+		if ( flip.hasClass('turn') ) {
+			flip.removeClass('turn');
 		} else {
 			$('.flip').removeClass('turn');
-			$(this).addClass('turn');
+			flip.addClass('turn');
 		}
 		
 	});
-	
 });
