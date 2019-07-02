@@ -80,7 +80,7 @@ gulp.task('javascript', function () {
 * Оптимизируем изображения
 */
 gulp.task('image-min', function () {
-	return gulp.src(paths.input.images + '**/*.+(png|jpg|gif|svg|jpeg)')
+	return gulp.src(paths.input.images + '**/*.+(png|jpg|gif|svg|jpeg|webp)')
 	.pipe(plumber())
 	.pipe(changed(paths.output.images))
 	.pipe(imagemin())
