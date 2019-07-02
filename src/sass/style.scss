@@ -1,8 +1,12 @@
 @import "includes/base";
 @import "includes/variables";
 
+/*
+* PAGE ELEMENTS
+*/
+
 body {
-  height: 100%;
+  height: 100vh;
   background-image: url(../img/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,6 +41,11 @@ body {
     perspective: 1000px;
     transition: transform 0.5s ease-out;
 
+      .holder {
+        width: 100%;
+        box-shadow: 1px 1px 20px #000;
+      }
+
       .frame {
         transform: translateY(-100%);
         width: 0.3%;
@@ -44,11 +53,12 @@ body {
 
       &:first-child {
         margin: 0 width-column(7,24) 10%;
+        display: inline;
       }
       
-      &:hover {
+      /*&:hover {
         transform: scale(1.1);
-      }
+      }*/
 
       .flip {
         position: relative;
@@ -58,11 +68,11 @@ body {
         transition: transform 1s;
         transform-style: preserve-3d;
         box-shadow: 1px 1px 20px #000;
+        
 
         .image {
           width: 100%;
           height: 100%;
-        
         }
 
         &__front, &__back {
@@ -74,11 +84,48 @@ body {
 
         &__back {
           transform: rotateY(180deg);
+          background-size: cover;
+
+          &--fool{
+            background-image: url(../img/thefool.png);
+          }
+
+          &--mage{
+            background-image: url(../img/themagician.png);
+          }
+
+          &--world{
+            background-image: url(../img/theworld.png);
+          }
         }
       }
   }
 
   .turn {
     transform: rotateY(180deg);
+  }
+}
+
+/*
+* GENERAL CLASSES & ANIMATION
+*/
+
+.hide{
+  display: none;
+}
+
+.shuffle {
+  width: 100%;
+
+  &--1 {
+    width: 100%;
+  }
+
+  &--2 {
+    width: 100%;
+  }
+
+  &--3 {
+    width: 100%;
   }
 }
