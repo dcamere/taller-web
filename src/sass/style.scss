@@ -1,13 +1,16 @@
 @import "includes/base";
 @import "includes/variables";
 
-.wrap {
-  max-width: 1240px;
-  margin: 0 auto;
+.content {
   padding: 0 width-column(1, 26);
   @include tablet {
     padding: 0 width-column(1, 31);
   }
+}
+
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 .home {
@@ -35,47 +38,83 @@
 
   .card {
     width: 100%;
-    border: 1px gray solid;
+    border: 1px black solid;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 10px width-column(1, 24);
+    transition: transform 1s;
+    //padding: 10px width-column(1, 24);
     margin-bottom: 12px;
-    transition: all 1s;
     @include tablet {
       width: width-column(9, 29);
       margin: 10px width-column(1, 29) 10px 0;
-      padding: 10px;
+      //padding: 10px;
     }
 
-    &:last-child {
+    &__top {
+      padding: 20px width-column(1, 9);
+    }
+
+    &__bottom {
+      padding: 30px width-column(1, 9);    
+      border-top: 1px solid #000;
+      
+    }
+
+    &:nth-child(3) {
       margin-right: 0;
     }
 
-    &:hover {
-      border: 1px red solid;
-      background-color: lightgray;
+    &1{
+      transform: translateX(0);
 
-      .card__title {
-        transform: translateX(30%);
+      &:hover {
+        transform: translateX(calc(100% + 42px));
+      }
+
+      &:hover ~ .card2 {
+        transform: translateX(calc(-100% - 42px));
       }
     }
       
     &__title {
-      transition: all 0.5s;
       @include createFont($bigFont, red, bold, Arial);
+      margin: 0;
+    
 
-      &--red {
-        color: $red;
+      &--ptitle {
+        margin-bottom: 10px;
+        @include createFont($bigFont, $dark, bold, Arial);
+      }
+      &--ptitle2 {
+        margin-bottom: 10px;
+        @include createFont(20px, $gray, bold, Arial);
       }
     }
 
-    &__input {
+    &__text {
+      margin: 0 0 25px 0;
+      @include createFont(16px, gray, normal, Arial);
+    }    
+    
+    &__img {
       width: 100%;
+      height: 200px;
+      display: block;
+      padding-bottom: 10px;
     }
 
-    &__text {
+    &__link {
+      display: block;
+      cursor: pointer;
       text-align: center;
-      @include createFont(16px, gray, normal, Arial);
+      border: 2px black solid;
+      width: 30%;
+      margin: 0 auto;
+      &:hover{
+        background-color: mediumorchid;
+      }
     }
+
+
   }
 }
