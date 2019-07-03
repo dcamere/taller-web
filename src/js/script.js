@@ -48,7 +48,23 @@
 const button = document.querySelector('#button1');
 const buttons = document.querySelectorAll('.card__button');
 const buttons2 = document.querySelectorAll('.card__button2');
+const minus = document.querySelectorAll('.spinner__minus');
+const plus = document.querySelectorAll('.spinner__plus');
 
+const spinnerClick = function(e, action){
+	let theInput = e.currentTarget.closest('.spinner').querySelector('.spinner__input'),
+		theInputValue = theInput.value;
+
+	if ( action === 'suma' ) {
+		theInputValue = parseInt(theInputValue) + 1;
+	}else if (action === 'resta') {
+		theInputValue = parseInt(theInputValue) - 1;
+	}
+
+	//console.log(inputValue);
+	theInput.value = theInputValue;
+	
+}
 
 const handleClick = function (e, action) {
 	// variable que usa E, que es el evento que estamos pasando como parámetro, el currentTarget del evento 
@@ -69,6 +85,8 @@ const handleClick = function (e, action) {
 	//action === 'add' ? closestCard.classList.add('card--animated') : closestCard.classList.remove('card--animated');
 }
 
+
+
 buttons.forEach((element) => {
 	element.addEventListener('click', function (e) {
 		handleClick(e, 'add');
@@ -78,6 +96,20 @@ buttons.forEach((element) => {
 buttons2.forEach((element) => {
 	element.addEventListener('click', function (e) {
 		handleClick(e, 'remove');
+	});
+});
+
+minus.forEach((element) => {
+	element.addEventListener('click', function (e) {
+		spinnerClick(e, 'resta');
+		//console.log(spinnerClick);
+	});
+});
+
+plus.forEach((element) => {
+	element.addEventListener('click', function (e) {
+		spinnerClick(e, 'suma');
+		//console.log(spinnerClick);
 	});
 });
 
