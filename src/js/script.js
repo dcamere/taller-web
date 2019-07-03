@@ -46,4 +46,15 @@ $(document).ready(function () {
 		}
 		
 	});
+
+	$('.button').on('click', function(){
+		$(this).addClass('hide');
+		$('.placeHolder').addClass('hide');
+		$('.card--1').addClass('shuffle--1');
+		$('.card--2').addClass('shuffle--2');
+		$('.card--3').addClass('shuffle--3');
+		$('.card').removeClass('hide');
+		$('.flip').removeClass('hide');
+		$('.frame').removeClass('hide');
+	});
 });

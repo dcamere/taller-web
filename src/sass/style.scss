@@ -22,12 +22,6 @@ body {
     margin: 30px width-column(9,24);
     z-index: 20;
     background: #ffffff;
-    opacity: 0.7;
-    transition: opacity 0.7s;
-  
-    &:hover {
-      opacity: 1;
-    }
   }
 }
 .flex-parent {
@@ -55,7 +49,17 @@ body {
         margin: 0 width-column(7,24) 10%;
         display: inline;
       }
-      
+
+      /*&--left {
+        transform: translate(width-column(14,24),-290px);
+        z-index: -2;
+      }
+
+      &--right {
+        transform: translate(width-column(-14,24),-290px);
+        z-index: -2;
+      }*/
+
       /*&:hover {
         transform: scale(1.1);
       }*/
@@ -115,17 +119,45 @@ body {
 }
 
 .shuffle {
-  width: 100%;
 
   &--1 {
-    width: 100%;
+    animation: shuffle--1 20s linear forwards;
   }
 
   &--2 {
-    width: 100%;
+    animation: shuffle--1 20s linear forwards;
   }
 
   &--3 {
-    width: 100%;
+    animation: shuffle--1 20s linear forwards;
   }
+}
+
+@keyframes shuffle--1 {
+  0% {transform: translate(0,0); z-index: 3;}
+  40% {transform: translate(0,0); z-index: 1;}
+  50% {transform: translate(width-column(6,24),0px); z-index: 1;}
+  60% {transform: translate(0,0); z-index: 3;}
+  80% {transform: translate(0,0); z-index: 3;}
+  100% {transform: translate(0,0);}
+}
+
+@keyframes shuffle--2 {
+  0% {transform: translate(width-column(14,24),-290px); z-index: 2;}
+  20% {transform: translate(width-column(14,24),-290px); z-index: 2;}
+  30% {transform: translate(width-column(20,24),-290px); z-index: 2;}
+  40% {transform: translate(width-column(14,24),-290px); z-index: 3;}
+  80% {transform: translate(width-column(14,24),-290px); z-index: 2;}
+  100% {transform: translate(0,0);}
+}
+
+@keyframes shuffle--3 {
+  0% {transform: translate(width-column(-14,24),-290px); z-index: 1;}
+  10% {transform: translate(width-column(-8,24),-290px); z-index: 1;}
+  20% {transform: translate(width-column(-14,24),-290px); z-index: 3;}
+  40% {transform: translate(width-column(-14,24),-290px); z-index: 2;}
+  60% {transform: translate(width-column(-14,24),-290px); z-index: 2;}
+  70% {transform: translate(width-column(-8,24),-290px); z-index: 1;}
+  80% {transform: translate(width-column(-14,24),-290px); z-index: 3;}
+  100% {transform: translate(0,0);}
 }

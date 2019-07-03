@@ -1,27 +1,27 @@
 .home  
     .wrap
         .flex-parent
-            .card
+            .card.card--1
                 .placeHolder
                     img.holder(src="img/cardback.png", alt="Card Back")
                 .flip.hide
                     .flip__front
                         img.image.image--front(src="img/cardback.png", alt="Card Back")
-                    .flip__back.flip__back--fool
+                    .flip__back
                         
                 img.frame(src="img/emptycard.png", alt="None").hide
-            .card.hide
+            .card.card--2.card--left.hide
                 .flip
                     .flip__front
                         img.image.image--front(src="img/cardback.png", alt="Card Back")
-                    .flip__back.flip__back--mage
+                    .flip__back
                         
                 img.frame(src="img/emptycard.png", alt="None")
-            .card.hide
+            .card.card--3.card--right.hide
                 .flip
                     .flip__front
                         img.image.image--front(src="img/cardback.png", alt="Card Back")
-                    .flip__back.flip__back--world
+                    .flip__backd
                         
                 img.frame(src="img/emptycard.png", alt="None")
         button.button Shuffle
