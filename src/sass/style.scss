@@ -59,6 +59,11 @@
         transform: translateX(30%);
       }
     }
+
+    &--animated {
+      background-color: black;
+      transform: scale(1.2);
+    }
       
     &__title {
       transition: all 0.5s;
