@@ -13,27 +13,34 @@
 .home {
   height: 100vh;
 
-  /*@if $theme == 'dark' {
-    background-color: black;
+  .cabecera{
+    background-color: crimson;
+    height: 92px;
+    padding:24px 24px 24px 24px;
+    &__logo{
+      width: 60px;
+      &__textologo{
+        color:$white;
+      }
+
+    }  
+    
   }
-
-  @if $theme == 'green' {
-    background-color: green;
-  } */
-
-  .flex-parent {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  .cuerpo{
+    background-color:$white;
+    height: 640px;
+    background-image: url("../img/labestia.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    
   }
-
-  /*@for $i from 1 through 3 {
-    .card-#{$i} {
-      width: 100% / $i;
-    }
-  }*/
-
+  .pie{
+    background-color:$dark;
+    height: 60px;
+  }
   .card {
+
     width: 100%;
     border: 1px gray solid;
     border-radius: 5px;
@@ -83,4 +90,4 @@
       @include createFont(16px, gray, normal, Arial);
     }
   }
-}
+} 
