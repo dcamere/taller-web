@@ -47,8 +47,12 @@
 const openButton = document.querySelector('#openMenu');
 const closeButton = document.querySelector('#closeMenu');
 
-openButton.addEventListener('click');
+const changeMenuDisplay = function(e, state) {
+	if (state === 'open' && ) {
 
-function changeMenuDisplay() {
+	} else (state === 'close' && ) {
 
+	}
 }
+
+openButton.addEventListener('click')
