@@ -43,3 +43,12 @@
 // 	tl.staggerFromTo($('.row.second div'), .5, {y: 400, autoAlpha: 0}, {y:0, autoAlpha: 1}, 0.3);
 // 	tl.to(htmlAndBody, .1, {overflowY: "auto"});
 // });
+
+const openButton = document.querySelector('#openMenu');
+const closeButton = document.querySelector('#closeMenu');
+
+openButton.addEventListener('click');
+
+function changeMenuDisplay() {
+
+}
