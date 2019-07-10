@@ -1,6 +1,18 @@
 @import "includes/base";
 @import "includes/variables";
 
+/*
+* COMMON CLASSES
+*/
+
+.hide {
+  display: none;
+}
+
+/*
+* PAGE ELEMENTS
+*/
+
 .header {
   height: 60px;
   width: 100%;
@@ -12,8 +24,6 @@
     }
 
     .nav {
-      display: none;
-
       .logo__img {
         width: 50px;
       }
@@ -38,6 +48,5 @@
 
     #closeMenu {
       float: right;
-      display: none;
     }
 }

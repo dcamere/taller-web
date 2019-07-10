@@ -48,11 +48,18 @@ const openButton = document.querySelector('#openMenu');
 const closeButton = document.querySelector('#closeMenu');
 
 const changeMenuDisplay = function(e, state) {
-	if (state === 'open' && ) {
-
+	const navBar = e.currentTarget.closest('.header').querySelector('.nav')
+	if (state === 'open' && navBar.classList.contains('.hide') {
+		
 	} else (state === 'close' && ) {
 
 	}
 }
 
-openButton.addEventListener('click')
+openButton.addEventListener('click', function(e){
+	changeMenuDisplay(e, 'open')	
+});
+
+closeButton.addEventListener('click', function(e){
+	changeMenuDisplay(e, 'close')	
+});
