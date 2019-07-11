@@ -49,7 +49,7 @@ const closeButton = document.querySelector('#closeMenu');
 
 const changeMenuDisplay = function(e, state) {
 	const navBar = e.currentTarget.closest('.header').querySelector('.nav')
-	if (state === 'open' && navBar.classList.contains('.hide') {
+	if (state === 'open' && navBar.classList.contains('.hide')) {
 		
 	} else (state === 'close' && ) {
 
